@@ -19,11 +19,12 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponse
+from django.shortcuts import render
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('wildstone_backend.api.urls')),
-    path('', lambda request: HttpResponse("WildStone Solutions backend is running!")),
+    path('', lambda request: render(request, 'landing.html')),
 ]
 
 if settings.DEBUG:
