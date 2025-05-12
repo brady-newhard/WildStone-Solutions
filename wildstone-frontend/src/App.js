@@ -1,18 +1,28 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Landing from './Landing';
 import ClientPortal from './ClientPortal';
 import Navbar from './Navbar';
 import './App.css';
 
-function App() {
+function AppRoutes() {
+  const location = useLocation();
+  const isLanding = location.pathname === '/';
   return (
-    <Router>
-      <Navbar />
+    <>
+      <Navbar showClientPortalButton={isLanding} />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/portal" element={<ClientPortal />} />
       </Routes>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppRoutes />
     </Router>
   );
 }
