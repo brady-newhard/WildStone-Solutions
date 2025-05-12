@@ -61,7 +61,7 @@ ROOT_URLCONF = 'wildstone_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'wildstone_backend' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
