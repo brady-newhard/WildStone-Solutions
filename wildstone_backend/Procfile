@@ -1,0 +1,1 @@
+web: gunicorn wildstone_backend.wsgi 
