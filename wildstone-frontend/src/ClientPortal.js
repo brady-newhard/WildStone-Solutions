@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-import Divider from '@mui/material/Divider';
 
 const ClientPortal = () => {
   useEffect(() => {

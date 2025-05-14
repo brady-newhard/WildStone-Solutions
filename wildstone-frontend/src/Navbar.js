@@ -23,7 +23,6 @@ const Navbar = ({ showClientPortalButton }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const handleMenuClick = (event) => {
     setAnchorEl(event.currentTarget);
