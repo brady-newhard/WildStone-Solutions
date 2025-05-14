@@ -7,8 +7,6 @@ import Box from '@mui/material/Box';
 import { Link } from 'react-router-dom';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 
 const menuItems = [
   { label: 'About', path: '/about' },
@@ -22,7 +20,6 @@ const menuItems = [
 const Navbar = ({ showClientPortalButton }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-  const theme = useTheme();
 
   const handleMenuClick = (event) => {
     setAnchorEl(event.currentTarget);
