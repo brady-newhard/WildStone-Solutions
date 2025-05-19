@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Landing from './Landing';
 import ClientPortal from './ClientPortal';
 import Navbar from './Navbar';
+import Profile from './Profile';
 import './App.css';
 
 function AppRoutes() {
@@ -14,6 +15,7 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/portal" element={<ClientPortal />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
   );
