@@ -1,25 +1,8 @@
-import React, { useEffect } from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import { styled } from '@mui/material/styles';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
-const StyledCard = styled(Card)(({ theme }) => ({
-  height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  transition: 'transform 0.2s',
-  backgroundColor: '#fff',
-  color: 'inherit',
-  '&:hover': {
-    transform: 'translateY(-8px)',
-  },
-}));
+const pipelinePhoto = "https://media.istockphoto.com/id/1253222864/photo/bulldozer-on-the-natural-gas-pipeline-construction-work-a-dug-trench-in-the-ground-for-the.jpg?s=612x612&w=0&k=20&c=QwQw1QwQw1QwQw1QwQw1QwQwQwQwQwQwQwQwQwQwQwQ=";
 
 const services = [
   {
@@ -45,276 +28,59 @@ const services = [
 ];
 
 const Landing = () => {
-  useEffect(() => {
-    document.title = 'WildStone Solutions';
-  }, []);
-
   return (
-    <Box sx={{ bgcolor: '#f5f5f5' }}>
-      {/* Hero Section */}
-      <Box
-        sx={{
-          minHeight: { xs: 'auto', md: '100vh' },
-          display: 'flex',
-          alignItems: { xs: 'flex-start', md: 'center' },
-          justifyContent: 'center',
-          background: 'linear-gradient(45deg, #000000 30%, #1a1a1a 90%)',
-          color: 'white',
-          position: 'relative',
-          overflow: 'hidden',
-          pt: { xs: 4, md: 0 },
-        }}
-      >
-        <Container 
-          maxWidth="lg" 
-          sx={{ 
-            position: 'relative', 
-            zIndex: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: { xs: 'flex-start', md: 'center' },
-            minHeight: { xs: 'auto', md: '100vh' },
-            py: { xs: 4, md: 8 }
-          }}
-        >
-          <Box
-            sx={{
-              position: 'relative',
-              textAlign: 'center',
-              maxWidth: '800px',
-              mx: 'auto',
-              mt: { xs: 2, md: 0 }
-            }}
-          >
-            <Typography
-              variant="h2"
-              sx={{
-                fontWeight: 700,
-                fontSize: { xs: '2.5rem', md: '4rem' },
-                mb: 2,
-                textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-                fontFamily: '"Playfair Display", serif',
-                letterSpacing: '0.02em',
-                color: '#fff',
-              }}
-            >
-              WildStone Solutions
-            </Typography>
-            <Typography
-              variant="h4"
-              sx={{
-                mb: 3,
-                color: '#90caf9',
-                fontSize: { xs: '1.5rem', md: '2rem' },
-                textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
-              }}
-            >
-              Construction Reporting Excellence
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                mb: 4,
-                fontSize: { xs: '1rem', md: '1.2rem' },
-                textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
-              }}
-            >
-              We specialize in developing cutting-edge reporting systems for the construction industry. Our solutions help construction companies from the field level to upper management tracking progress, data management, and maintain compliance through powerful analytics and intuitive reporting tools.
-            </Typography>
-            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexWrap: 'wrap' }}>
-              <Button
-                variant="contained"
-                size="large"
-                sx={{
-                  bgcolor: '#90caf9',
-                  '&:hover': {
-                    bgcolor: '#64b5f6',
-                  },
-                }}
-              >
-                Get Started
-              </Button>
-              <Button
-                variant="outlined"
-                size="large"
-                sx={{
-                  color: 'white',
-                  borderColor: 'white',
-                  '&:hover': {
-                    borderColor: '#90caf9',
-                    color: '#90caf9',
-                  },
-                }}
-              >
-                Learn More
-              </Button>
-            </Box>
-          </Box>
-        </Container>
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '100%',
-            height: '100%',
-            zIndex: 1,
-            opacity: 0.15,
-            pointerEvents: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <img
-            src={process.env.PUBLIC_URL + '/images/WS-Symbol.png'}
-            alt="WildStone Solutions Logo"
-            style={{
-              width: '80%',
-              height: '80%',
-              objectFit: 'contain',
-            }}
-          />
-        </Box>
-      </Box>
-
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-8 py-16">
+        {/* Left: Text Content */}
+        <div className="w-full md:w-1/2 flex flex-col items-start justify-center">
+          <span className="mb-4 inline-flex items-center px-3 py-1 rounded-full bg-neutral-900 text-zinc-100 text-xs font-semibold shadow">Built for Construction & Pipeline Teams</span>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-100 mb-4 leading-tight">
+            Transform How You Report &amp; Manage Construction Projects
+          </h1>
+          <p className="text-zinc-100 mb-8 max-w-lg">
+            WildStone Solutions empowers field crews and managers in the pipeline industry with real-time, accurate reporting. Streamline your workflows, track progress, and make data-driven decisions—right from the job site to the boardroom. Our platform is purpose-built for the unique challenges of pipeline construction and maintenance.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a href="#services" className="rounded-2xl px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white shadow-md transition duration-300 font-semibold">Get Started</a>
+            <a href="#services" className="rounded-2xl px-6 py-3 bg-transparent border border-slate-700 text-zinc-100 hover:bg-slate-800 shadow-md transition duration-300 font-semibold relative group overflow-hidden">
+              <span>See How It Works</span>
+              <span className="absolute left-0 bottom-2 w-full h-0.5 bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+            </a>
+          </div>
+        </div>
+        {/* Right: PIPE Logo in bottom right of Pipeline Photo */}
+        <div className="w-full md:w-1/2 flex items-center justify-center relative mb-12 md:mb-0 min-h-[400px] h-full">
+          <div className="relative w-full min-h-[400px] h-[520px] md:h-[600px] overflow-hidden shadow-2xl">
+            <img src="/images/pipeline-bg.jpg" alt="Pipeline Construction" className="absolute bottom-0 left-0 w-full h-auto min-h-full object-cover object-[center_bottom_80%]" />
+            <img src="/images/PIPE-Logo.png" alt="PIPE Logo" className="absolute bottom-6 right-2 w-56 md:w-80 h-56 md:h-80 object-contain drop-shadow-2xl pointer-events-none" />
+          </div>
+        </div>
+      </div>
       {/* Services Section */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography
-          variant="h3"
-          align="center"
-          sx={{ mb: 6, fontWeight: 700 }}
-        >
-          Our Services
-        </Typography>
-        <Grid container spacing={4} justifyContent="center">
-          {services.map((service, index) => (
-            <Grid 
-              item 
-              xs={12} 
-              sm={6} 
-              md={4} 
-              key={index}
-              sx={{
-                display: 'flex',
-                justifyContent: 'center'
-              }}
-            >
-              <StyledCard sx={{ width: '100%', maxWidth: 400 }}>
-                <CardContent>
-                  <Typography
-                    variant="h1"
-                    align="center"
-                    sx={{ mb: 2, fontSize: '3rem' }}
-                  >
-                    {service.icon}
-                  </Typography>
-                  <Typography
-                    variant="h5"
-                    component="h2"
-                    sx={{ mb: 2, fontWeight: 600, color: '#90caf9' }}
-                  >
-                    {service.title}
-                  </Typography>
-                  <Typography variant="body1" sx={{ color: '#666' }}>
-                    {service.description}
-                  </Typography>
-                </CardContent>
-              </StyledCard>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-
-      {/* About Section */}
-      <Box sx={{ bgcolor: '#000', color: 'white', py: 8 }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6}>
-              <Typography variant="h3" sx={{ mb: 3, fontWeight: 700 }}>
-                About Us
-              </Typography>
-              <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem' }}>
-                At WildStone Solutions, we're dedicated to revolutionizing construction reporting through innovative technology. Our team combines deep industry knowledge with technical expertise to deliver reporting systems that drive efficiency and profitability in construction projects.
-              </Typography>
-              <Typography variant="body1" sx={{ fontSize: '1.1rem' }}>
-                We understand the unique challenges of construction reporting and have developed solutions that streamline workflows, ensure compliance, and provide actionable insights for better decision-making.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Paper
-                elevation={6}
-                sx={{
-                  p: 3,
-                  bgcolor: 'rgba(255, 255, 255, 0.1)',
-                  backdropFilter: 'blur(10px)',
-                }}
+      <div id="services" className="py-16 px-4 bg-zinc-900/95">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-zinc-100 mb-12">Our Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
-                  Why Choose Us?
-                </Typography>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  {[
-                    'Construction industry expertise',
-                    'Real-time reporting capabilities',
-                    'Compliance-focused solutions',
-                    'Customizable reporting templates',
-                    'Seamless integration with existing systems'
-                  ].map((item, index) => (
-                    <li key={index} style={{ marginBottom: '1rem' }}>
-                      <Typography variant="body1">✓ {item}</Typography>
-                    </li>
-                  ))}
-                </ul>
-              </Paper>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
-
-      {/* Contact Section */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography
-          variant="h3"
-          align="center"
-          sx={{ mb: 6, fontWeight: 700 }}
-        >
-          Get in Touch
-        </Typography>
-        <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} md={8}>
-            <Paper
-              elevation={3}
-              sx={{
-                p: 4,
-                textAlign: 'center',
-              }}
-            >
-              <Typography variant="h5" sx={{ mb: 3 }}>
-                Ready to Start Your Project?
-              </Typography>
-              <Typography variant="body1" sx={{ mb: 4 }}>
-                Let's discuss how we can help transform your ideas into reality.
-              </Typography>
-              <Button
-                variant="contained"
-                size="large"
-                sx={{
-                  bgcolor: '#000',
-                  '&:hover': {
-                    bgcolor: '#333',
-                  },
-                }}
-              >
-                Contact Us
-              </Button>
-            </Paper>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+                <div className="flex flex-col p-6 rounded-xl bg-zinc-800 hover:shadow-xl hover:scale-[1.02] transition-transform duration-300 border border-zinc-700">
+                  <div className="text-4xl mb-6 flex items-center justify-center">{service.icon}</div>
+                  <h3 className="text-lg font-semibold text-zinc-100 mb-2 text-center">{service.title}</h3>
+                  <div className="h-px bg-zinc-700 my-2" />
+                  <p className="text-zinc-300 text-center">{service.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
