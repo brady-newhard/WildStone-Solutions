@@ -40,7 +40,7 @@ const Landing = () => {
           <p className="text-zinc-100 mb-8 max-w-lg">
             WildStone Solutions empowers field crews and managers in the pipeline industry with real-time, accurate reporting using the PIPE (Pipeline Information & Project Evaluation) reporting system. Streamline your workflows, track progress, and make data-driven decisions—right from the job site to the boardroom. Our platform is purpose-built for the unique challenges of pipeline construction and maintenance.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-row gap-4">
             <a href="#services" className="rounded-2xl px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white shadow-md transition duration-300 font-semibold">Get Started</a>
             <a href="#services" className="rounded-2xl px-6 py-3 bg-transparent border border-slate-700 text-zinc-100 hover:bg-slate-800 shadow-md transition duration-300 font-semibold relative group overflow-hidden">
               <span>See How It Works</span>
