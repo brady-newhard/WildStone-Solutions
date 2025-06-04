@@ -30,7 +30,7 @@ const services = [
 const Landing = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-8 pb-16">
         {/* Left: Text Content */}
         <div className="w-full md:w-1/2 flex flex-col items-start justify-center">
           <span className="mb-4 inline-flex items-center px-3 py-1 rounded-full bg-neutral-900 text-zinc-100 text-xs font-semibold shadow">Built for Construction & Pipeline Teams</span>
@@ -49,11 +49,17 @@ const Landing = () => {
           </div>
         </div>
         {/* Right: PIPE Logo in bottom right of Pipeline Photo */}
-        <div className="w-full md:w-1/2 flex flex-col items-center justify-center relative mb-12 md:mb-0 min-h-[400px] h-full">
-          <h1 className="block md:hidden text-2xl font-bold text-zinc-100 font-serif mb-2">WildStone Solutions</h1>
-          <div className="relative w-full min-h-[400px] h-[520px] md:h-[600px] overflow-hidden shadow-2xl">
-            <img src="/images/pipeline-bg.jpg" alt="Pipeline Construction" className="absolute bottom-0 left-0 w-full h-auto min-h-full object-cover object-[center_bottom_80%]" />
-            <img src="/images/PIPE-Logo.png" alt="PIPE Logo" className="absolute bottom-6 right-2 w-56 md:w-80 h-56 md:h-80 object-contain drop-shadow-2xl pointer-events-none" />
+        <div className="w-full md:w-1/2 flex flex-col items-center justify-start relative h-full">
+          <div className="relative w-full flex flex-col items-center z-10">
+            <div className="block md:hidden w-full flex justify-center" style={{ marginTop: 0 }}>
+              <div className="w-72 relative">
+                <img src="/images/wildstone-header.png" alt="WildStone Solutions" className="w-full" style={{ marginTop: '-3rem', marginBottom: '-2rem', zIndex: 20, position: 'relative' }} />
+              </div>
+            </div>
+            <div className="relative w-full min-h-[400px] h-[520px] md:h-[600px] overflow-hidden shadow-2xl -mt-8">
+              <img src="/images/pipeline-bg.jpg" alt="Pipeline Construction" className="absolute bottom-0 left-0 w-full h-auto min-h-full object-cover object-[center_bottom_80%]" />
+              <img src="/images/PIPE-Logo.png" alt="PIPE Logo" className="absolute bottom-6 right-2 w-56 md:w-80 h-56 md:h-80 object-contain drop-shadow-2xl pointer-events-none" />
+            </div>
           </div>
         </div>
       </div>
