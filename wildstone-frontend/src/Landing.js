@@ -38,7 +38,7 @@ const Landing = () => {
             Transform How You Report &amp; Manage Construction Projects
           </h1>
           <p className="text-zinc-100 mb-8 max-w-lg">
-            WildStone Solutions empowers field crews and managers in the pipeline industry with real-time, accurate reporting. Streamline your workflows, track progress, and make data-driven decisions—right from the job site to the boardroom. Our platform is purpose-built for the unique challenges of pipeline construction and maintenance.
+            WildStone Solutions empowers field crews and managers in the pipeline industry with real-time, accurate reporting using the PIPE (Pipeline Information & Project Evaluation) reporting system. Streamline your workflows, track progress, and make data-driven decisions—right from the job site to the boardroom. Our platform is purpose-built for the unique challenges of pipeline construction and maintenance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#services" className="rounded-2xl px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white shadow-md transition duration-300 font-semibold">Get Started</a>
@@ -49,7 +49,8 @@ const Landing = () => {
           </div>
         </div>
         {/* Right: PIPE Logo in bottom right of Pipeline Photo */}
-        <div className="w-full md:w-1/2 flex items-center justify-center relative mb-12 md:mb-0 min-h-[400px] h-full">
+        <div className="w-full md:w-1/2 flex flex-col items-center justify-center relative mb-12 md:mb-0 min-h-[400px] h-full">
+          <h1 className="block md:hidden text-2xl font-bold text-zinc-100 font-serif mb-2">WildStone Solutions</h1>
           <div className="relative w-full min-h-[400px] h-[520px] md:h-[600px] overflow-hidden shadow-2xl">
             <img src="/images/pipeline-bg.jpg" alt="Pipeline Construction" className="absolute bottom-0 left-0 w-full h-auto min-h-full object-cover object-[center_bottom_80%]" />
             <img src="/images/PIPE-Logo.png" alt="PIPE Logo" className="absolute bottom-6 right-2 w-56 md:w-80 h-56 md:h-80 object-contain drop-shadow-2xl pointer-events-none" />

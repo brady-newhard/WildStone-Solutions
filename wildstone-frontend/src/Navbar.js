@@ -19,7 +19,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img src="/images/WS-Symbol.png" alt="WildStone Solutions Logo" className="h-9 w-9" />
-          <span className="text-xl font-bold text-zinc-100 font-serif tracking-tight">WildStone Solutions</span>
+          <span className="text-xl font-bold text-zinc-100 font-serif tracking-tight hidden md:inline">WildStone Solutions</span>
         </Link>
         {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center gap-8">
@@ -46,19 +46,32 @@ const Navbar = () => {
       </div>
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-zinc-900/95 px-4 pb-4 pt-2 flex flex-col gap-2 border-b border-zinc-800">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.path}
-              className="text-zinc-100 hover:text-white font-medium py-2 transition-colors"
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="md:hidden flex justify-center w-full absolute left-0 right-0 top-16 z-40 animate-fade-in">
+          <div className="bg-zinc-900/50 rounded-xl shadow-lg mt-2 w-11/12 max-w-md flex flex-col items-center py-8 px-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.path}
+                className="text-zinc-100 hover:text-blue-400 font-bold text-xl py-3 transition-colors text-center w-full"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       )}
+
+      {/* Add fade-in animation */}
+      <style>{`
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(-16px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+          animation: fade-in 0.3s ease;
+        }
+      `}</style>
     </nav>
   );
 };
