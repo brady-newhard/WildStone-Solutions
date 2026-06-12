@@ -139,31 +139,21 @@ const Landing = () => {
             </a>
           </div>
         </div>
-        {/* Right: Construction imagery with WildStone branding */}
-        <div className="w-full md:w-1/2 flex flex-col items-center justify-start relative h-full">
-          <div className="relative w-full flex flex-col items-center z-10">
-            <div className="block md:hidden w-full flex justify-center" style={{ marginTop: 0 }}>
-              <div className="w-72 relative">
-                <img
-                  src="/images/wildstone-header.png"
-                  alt="WildStone Solutions"
-                  className="w-full"
-                  style={{ marginTop: "-3rem", marginBottom: "-2rem", zIndex: 20, position: "relative" }}
-                />
-              </div>
-            </div>
-            <div className="relative w-full min-h-[400px] h-[520px] md:h-[600px] overflow-hidden shadow-2xl -mt-8">
-              <img
-                src="/images/pipeline-bg.jpg"
-                alt="Construction site"
-                className="absolute bottom-0 left-0 w-full h-auto min-h-full object-cover object-[center_bottom_80%]"
-              />
-              <img
-                src="/images/wildstone-symbol.png"
-                alt="WildStone Solutions"
-                className="absolute bottom-6 right-2 w-44 md:w-64 h-44 md:h-64 object-contain drop-shadow-2xl pointer-events-none"
-              />
-            </div>
+        {/* Right: Pipeline ROW imagery with WildStone logo overlay */}
+        <div className="w-full md:w-1/2 flex items-center justify-center relative">
+          <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl min-h-[360px] h-[420px] sm:h-[480px] md:h-[600px]">
+            <img
+              src="/images/pipeline-bg.jpg"
+              alt="Pipeline right-of-way construction"
+              className="absolute inset-0 w-full h-full object-cover object-[center_bottom_80%]"
+            />
+            {/* Darkening overlay so the white logo stays legible over the photo */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30" />
+            <img
+              src="/images/wildstone-header.png"
+              alt="WildStone Solutions"
+              className="absolute inset-0 m-auto w-4/5 max-w-md object-contain drop-shadow-2xl pointer-events-none"
+            />
           </div>
         </div>
       </div>
