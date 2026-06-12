@@ -8,3 +8,9 @@
   to = "https://www.wildstonesolutions.com/:splat"
   status = 301
   force = true
+
+# SPA fallback so client-side routes (e.g. /privacy, /contact) load on direct visit
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
